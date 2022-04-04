@@ -70,4 +70,4 @@ echo "<br>";
 echo filesize('simple.pdf');
 ?>
 
-<iframe src="http://pdfanalyzer2.dev1.setasign.local/plugin?file=<?php echo urlencode(realpath('simple.pdf')); ?>" width="100%" height="98%"></iframe>
+<iframe src="simple.pdf" width="100%" height="98%"></iframe>

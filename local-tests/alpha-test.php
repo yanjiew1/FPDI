@@ -101,4 +101,4 @@ echo filesize('alpha-test.pdf');
 
 ?>
 
-<iframe src="http://pdfanalyzer2.dev1.setasign.local/plugin?file=<?php echo urlencode(realpath('alpha-test.pdf')); ?>" width="100%" height="96%"></iframe>
+<iframe src="alpha-test.pdf" width="100%" height="96%"></iframe>

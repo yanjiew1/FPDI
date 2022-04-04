@@ -53,7 +53,7 @@ foreach ($files as $file) {
         #break;
     }
 
-    $pdf->Output(realpath('memory.pdf'), 'F');
+    $pdf->Output('memory.pdf', 'F');
 
     echo microtime(true) - $start;
     echo "<br>";
@@ -73,4 +73,4 @@ foreach ($files as $file) {
 
 ?>
 
-<iframe src="http://pdfanalyzer2.dev1.setasign.local/plugin?file=<?php echo urlencode(realpath('memory.pdf')); ?>" width="100%" height="96%"></iframe>
+<iframe src="memory.pdf" width="100%" height="96%"></iframe>

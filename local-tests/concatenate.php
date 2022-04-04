@@ -78,5 +78,5 @@ echo filesize('concatenate.pdf');
 echo "<br>";
 
 ?>
-<iframe src="http://pdfanalyzer2.dev1.setasign.local/plugin?file=<?php echo urlencode(realpath('concatenate.pdf')); ?>"
+<iframe src="concatenate.pdf"
         width="100%" height="94%"></iframe>

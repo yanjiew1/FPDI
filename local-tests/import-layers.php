@@ -71,5 +71,5 @@ foreach ($files as $file) {
 $pdf->Output('F', 'import-layers.pdf');
 
 ?>
-<iframe src="http://pdfanalyzer2.dev1.setasign.local/plugin?file=<?php echo urlencode(realpath('import-layers.pdf')); ?>"
+<iframe src="import-layers.pdf"
         width="100%" height="94%"></iframe>
