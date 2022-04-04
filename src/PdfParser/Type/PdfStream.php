@@ -19,7 +19,7 @@ use setasign\Fpdi\PdfParser\Filter\Lzw;
 use setasign\Fpdi\PdfParser\PdfParser;
 use setasign\Fpdi\PdfParser\PdfParserException;
 use setasign\Fpdi\PdfParser\StreamReader;
-use setasign\FpdiPdfParser\PdfParser\Filter\Predictor;
+use setasign\Fpdi\PdfParser\Filter\Predictor;
 
 /**
  * Class representing a PDF stream object
@@ -266,15 +266,6 @@ class PdfStream extends PdfType
                     if ($decodeParam instanceof PdfDictionary) {
                         $predictor = PdfDictionary::get($decodeParam, 'Predictor', PdfNumeric::create(1));
                         if ($predictor->value !== 1) {
-                            if (!\class_exists(Predictor::class)) {
-                                throw new PdfParserException(
-                                    'This PDF document makes use of features which are only implemented in the ' .
-                                    'commercial "FPDI PDF-Parser" add-on (see https://www.setasign.com/fpdi-pdf-' .
-                                    'parser).',
-                                    PdfParserException::IMPLEMENTED_IN_FPDI_PDF_PARSER
-                                );
-                            }
-
                             $colors = PdfDictionary::get($decodeParam, 'Colors', PdfNumeric::create(1));
                             $bitsPerComponent = PdfDictionary::get(
                                 $decodeParam,
